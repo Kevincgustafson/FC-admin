@@ -1,0 +1,398 @@
+
+body {
+    background-color: #A9A9A9;
+    font-size: 12px;
+    padding-top: 65px
+}
+
+label {
+    font-size: 16px
+}
+
+td, th {
+   font-size: 16px 
+}
+
+/*Top nav Styles*/
+.navbar-title {
+    color: #fff;
+    margin: 15px 10px 0px 10px;
+    padding-right: 15px;
+}
+
+.fc-logo {
+    height: 50px;
+}
+
+.admin-search {
+    padding: 6px 400px 6px 10px;
+    
+}
+
+.nav-dd {
+    padding: 6px 100px 6px 10px;
+    margin-right: 10px;
+    background-color: white;
+    color: black;
+    position: relative;
+}
+
+.btn-outline-success {
+    color: white;
+    border-color: white;
+    background-color: #D38304;
+}
+
+div.dropdown-menu {
+    background-color: #ffffff;
+    margin: 0px 0px;
+    border-color: #000000;
+}
+
+button.btn-outline-success:hover {
+    background-color: #D38304;
+    border-color: #D38304;
+}
+
+a.dropdown-item:hover {
+    background-color: #CECECE;
+}
+
+/*########### Side Bar Wrapper ################*/
+
+#wrapper {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 0px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+
+/* Sidebar Styles */
+
+.mb-0 {
+    font-size: 16px;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+    font-size: 1rem;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 16px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+.dropdown-icon {
+    display: none;
+}
+
+
+.da-logo {
+    height: 20px;
+    margin: 0 20px 0 -10px
+}
+
+
+@media (max-width:991px) {
+    #wrapper {
+        padding-left: 50px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0px;
+    }
+
+    #sidebar-wrapper {
+        width: 67px;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+    
+    .dropdown-icon {
+        display: block;
+        padding: 10px;
+    }
+
+    #sidebar-wrapper.toggled {
+        width: 250px;
+    }
+}
+
+
+/*   Material Icons  */
+
+
+.nav-mat-icon {
+    padding-right: 10px;
+    margin-left: -30px;
+}
+
+.dropdown-menu {
+    background-color: #000;
+    margin-left: 100px;
+    border-color: #fff;
+    position: relative;
+}
+
+.arrow {
+    margin-left: -20px;
+    text-align: left;
+    float: right;
+    
+}
+
+.main-icon {
+    margin: 0px 0 0 0 
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/*  Main sections */
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.main-section {
+    height: 100%;
+    width: 100%;
+    background-color: #CECECE;
+    margin: 10px 0px 0 -15px;
+    padding: 0 0 20px 0px;
+    
+}
+
+.main-section-list {
+    height: 100%;
+    width: 1600px;
+    background-color: #FFFFFF;
+    margin: 10px 0px 0 -15px;
+    padding: 0 0 20px 0px;
+}
+
+.col-heading {
+    background-color: #006699;
+    border-radius: 5px
+}
+
+.col-head {
+    color:#ffffff;
+    margin: 10px;
+}
+
+.col-heading-lg {
+    background-color: #006699;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.fc-btn {
+    background-color: #D38304;
+    border-color: #D38304;
+    color: #ffffff
+}
+
+.col-3 {
+    left: 50px;
+    float: right;
+    padding: 20px;
+}
+
+.main-dd {
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+
+.small-dd {
+    width: 299px;
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+
+.xs-dd {
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+
+.whitelist-ip {
+    margin: 5px 0 0 50px;
+}
+
+.secondary-check {
+    margin: 0 20px;
+}
+
+.ip-field {
+    height: 200px;
+    
+}
+
+.jails-info {
+    margin-top: 75px; 
+}
+
+.summary {
+    height: 100px;
+}
+
+.md-form {
+    height: 200px;
+}
+
+.case-xml {
+    height: 750px;
+}
+
+.graphs {
+    padding: 10px 20px 10px 50px;
+}
+
+.card {
+    width: 30rem;
+}
+
+.list-group-item {
+    font-size: 14px;
+    height: 30px;
+}
+
+/*  ############### Media Queries ###################### */
+
+@media screen and (max-width: 680px) {
+  .admin-search {
+    padding: 6px 300px 6px 10px;
+    width: 80%;
+    }
+        .col-3 {
+    left: 270px;
+    float: right;  
+    }
+    .jails-info {
+        margin-top: 0px
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    
+    .navbar-title {
+    position: absolute;
+    padding: 0px 125px 15px ;
+    margin: 15px 10px 00px 10px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .admin-search {
+    padding: 6px 250px 6px 10px;
+    }
+    
+    .card {
+    margin: 10px;
+    max-width: auto; 
+    width: auto;
+    height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 1889px) {
+    .card {
+    margin: 10px;
+    }
+}

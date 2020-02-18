@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!--    -- Fonts -- >-->
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!--   Material Icons   -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        body {
+            font-family: 'Roboto';
+            font-size: 22px;
+        }
+    </style>
+
+    <title>Fastcase System Admin Platform</title>
+</head>
+
+<body>
+
+    <!--    Top Nav Bar  -->
+    <div class="top-nav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            
+            <img class="fc-logo" src="Assets/fastcase-logo.svg">
+            <p class="navbar-title">Admin</p>
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline">
+                <input class="form-control mr-sm-2 admin-search" type="search" placeholder="Search" aria-label="Search">
+            </form>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-secondary dropdown-toggle nav-dd" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Type
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Users</a>
+                            <a class="dropdown-item" href="#">Accounts</a>
+                            <a class="dropdown-item" href="#">Cases</a>
+                        </div>
+                    </li>
+                    <li><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Side Nav Bar-->
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="dropdown-icon"><a href="#" onclick="openSidebar()">&#9776;</a></li>
+                <li class="nav-item dropdown">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="" data-parent="#accordionEx" href="dashboard.html" aria-expanded="true" aria-controls="">
+                            <h5 class="mb-0">
+                                <i class="material-icons nav-mat-icon align-bottom">dashboard</i> Dashboard
+                            </h5>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#cases" aria-expanded="true" aria-controls="cases">
+                            <h5 class="mb-0">
+                                <i class="material-icons nav-mat-icon align-bottom">label_important</i> Cases <i class="material-icons arrow"> arrow_drop_down </i>
+                            </h5>
+                        </a>
+                    </div>
+                    <div id="cases" class="collapse" role="tabpanel" aria-labelledby="cases" data-parent="#accordionEx">
+                        <div class="card-body">
+                            <a class="dropdown-item" href="caselist.html">Case List</a>
+                            <a class="dropdown-item" href="modifycase.html">Edit Case</a>
+                            <a class="dropdown-item" href="#">Bad Law Bot</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#users" aria-expanded="true" aria-controls="collapseOne1">
+                            <h5 class="mb-0"><i class="material-icons nav-mat-icon align-bottom">people</i> Users <i class="material-icons arrow"> arrow_drop_down </i></h5>
+                        </a>
+                    </div>
+                    <div id="users" class="collapse" role="tabpanel" aria-labelledby="users" data-parent="#accordionEx">
+                        <div class="card-body">
+                            <a class="dropdown-item" href="adduser.html">Add User</a>
+                            <a class="dropdown-item" href="userlist.html">User List</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#partners" aria-expanded="true" aria-controls="partners">
+                            <h5 class="mb-0 align-middle"><i class="material-icons nav-mat-icon align-bottom">thumbs_up_down</i> Accounts<i class="material-icons arrow"> arrow_drop_down </i></h5>
+                        </a>
+                    </div>
+                    <div id="partners" class="collapse " role="tabpanel" aria-labelledby="partners" data-parent="#accordionEx">
+                        <div class="card-body">
+                            <a class="dropdown-item" href="addaccount.html">Add Account</a>
+                            <a class="dropdown-item" href="accountlist.html">Partner List</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#reports" aria-expanded="true" aria-controls="reports">
+                            <h5 class="mb-0 align-middle"><i class="material-icons nav-mat-icon align-bottom">assessment</i> Reports<i class="material-icons arrow"> arrow_drop_down </i></h5>
+                        </a>
+                    </div>
+                    <div id="reports" class="collapse " role="tabpanel" aria-labelledby="reports" data-parent="#accordionEx">
+                        <div class="card-body">
+                            <a class="dropdown-item" href="#">Application</a>
+                            <a class="dropdown-item" href="#">User Reports</a>
+                            <a class="dropdown-item" href="#">NPS</a>
+                            <a class="dropdown-item" href="#">Back to 6</a>
+                            <a class="dropdown-item" href="#">Bar Usage</a>
+                            <a class="dropdown-item" href="#">eCommerce</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#jails" aria-expanded="true" aria-controls="jails">
+                            <h5 class="mb-0"><i class="material-icons nav-mat-icon align-bottom">account_balance</i> Jails<i class="material-icons arrow"> arrow_drop_down </i></h5>
+                        </a>
+                    </div>
+                    <div id="jails" class="collapse " role="tabpanel" aria-labelledby="jails" data-parent="#accordionEx">
+                        <div class="card-body">
+                            <a class="dropdown-item" href="addjail.html">Add Jail</a>
+                            <a class="dropdown-item" href="jailslist.html">Jails List</a>
+                            <a class="dropdown-item" href="vendorlist.html">Vendor List</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#docketAlarm" aria-expanded="true" aria-controls="docketAlarm">
+                            <h5 class="mb-0 align-middle"><img class="da-logo align-bottom" src="Assets/DA_white.svg"> Docket Alarm <i class="material-icons arrow"> arrow_drop_down </i></h5>
+                        </a>
+                    </div>
+                    <div id="docketAlarm" class="collapse " role="tabpanel" aria-labelledby="docketAlarm" data-parent="#accordionEx">
+                        <div class="card-body">
+                            <a class="dropdown-item" href="#">Data</a>
+                            <a class="dropdown-item" href="#">Users</a>
+                            <a class="dropdown-item" href="#">Recent Activity</a>
+                            <a class="dropdown-item" href="#">Recent Payments</a>
+                            <a class="dropdown-item" href="#">Recent Purchases</a>
+                            <a class="dropdown-item" href="#">Tracked Documents</a>
+                            <a class="dropdown-item" href="#">Trial/Discount Links</a>
+                            <a class="dropdown-item" href="#">Advanced</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <div class="card-header " role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#nextChapter" aria-expanded="true" aria-controls="nextChapter">
+                            <h5 class="mb-0"><i class="material-icons nav-mat-icon align-bottom">double_arrow</i> Next Chapter <i class="material-icons arrow"> arrow_drop_down </i></h5>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#aisandbox" aria-expanded="true" aria-controls="collapseOne1">
+                            
+                            <h5 class="mb-0"><img class="da-logo" src="Assets/AI-Logo.png"> AI Sandbox<i class="material-icons arrow"> arrow_drop_down </i></h5>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row heading">
+                    <div class="col-lg-12">
+                        <h1><i class="material-icons md-48 main-icon align-bottom">thumbs_up_down</i> Add Account</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row main-section">
+                    <div class="col-xl-5 col-lg-12">
+                        <h5 class="col-head col-heading-lg">Account Information</h5>
+                        <form>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Account Name</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Billing Contact</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Billing Address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Billing Address 2</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Billing City</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm">
+                                    <label for="exampleInputPassword1">Billing State</label>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle xs-dd" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Choose One">
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Alabama</a>
+                                        <a class="dropdown-item" href="#">Alaska</a>
+                                        <a class="dropdown-item" href="#">Another</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Billing Zip</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                    </div>
+
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Country</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Web URL</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Logo URL</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-xl-5 col-lg-12">
+                        <h5 class="col-head col-heading-lg">Credit Card Information</h5>
+                        <form>
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Credit Card Type</label>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle main-dd" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Choose One">
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Visa</a>
+                                    <a class="dropdown-item" href="#">Mastercard</a>
+                                    <a class="dropdown-item" href="#">American Express</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Credit Card Number</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Credit Card Holder Name</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Expiration Date</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Billing Address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Billing Address 2</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Billing City</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm">
+                                    <label for="exampleInputPassword1">Billing State</label>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle xs-dd" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Choose One">
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Alabama</a>
+                                        <a class="dropdown-item" href="#">Alaska</a>
+                                        <a class="dropdown-item" href="#">Another</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Billing Zip</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                    </div>
+
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Country</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5>Account Activation</h5>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <label for="exampleInputPassword1">Active</label>
+                                            <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle xs-dd" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Choose One">
+                                                </button>
+                                            </div>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Yes</a>
+                                                <a class="dropdown-item" href="#">No</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Active Stop Date</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-1 col-lg-1 col-3">
+                        <button type="button" class="btn btn-primary fc-btn" data-toggle="modal" data-target="#saveModal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="saveModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Save Data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Save Complete!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary fc-btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body></html>
